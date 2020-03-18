@@ -17,7 +17,13 @@ $(function(){
             //     console.log(data[day]);
             // }
             for (let dayData of Object.entries(data)) {
-                
+                $('#table-data').append(`
+                <tr>
+                    <td>${dayData[0]}</td>
+                    <td>${dayData[1]["1. open"]}</td>
+                    <td>${dayData[1]["4. close"]}</td>
+                </tr>
+                `);
             }
         })
     })
